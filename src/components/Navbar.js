@@ -9,7 +9,7 @@ export default function Navbar() {
       <div class="max-width">
         <div class="logo">
           <Link to="/">
-            Spiritual_ <span>Codes</span>
+            Spiritual_ <span>GAurav</span>
           </Link>
         </div>
         <ul class="menu ">
