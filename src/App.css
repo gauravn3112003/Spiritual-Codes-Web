@@ -50,7 +50,7 @@
   opacity: 1;
   pointer-events: auto;
 }
-.scroll-up-btn.show i{
+.scroll-up-btn.show i {
   color: white;
 }
 
@@ -69,12 +69,12 @@
   }
 }
 
-
 body {
   width: 100%;
   height: 100vh;
   background-size: 100% 100%;
   position: relative;
+  background-color: var(--body-background);
   background-repeat: no-repeat;
 }
 
@@ -153,7 +153,7 @@ body {
   color: var(--btn-hover-background);
 }
 
-.navbar ul li i{
+.navbar ul li i {
   margin: 0 5px;
 }
 
@@ -292,7 +292,7 @@ body {
     /* border:2px solid red; */
     padding: 5px 50px;
   }
-  .navbar ul li i{
+  .navbar ul li i {
     color: white;
     font-size: 20px;
     margin-right: 10px;
@@ -374,7 +374,7 @@ body .wrapper {
 section .box {
   max-width: 1200px;
   display: block;
-  padding: 15px 10px;
+  padding: 0 10px;
   /* border: 1px solid red; */
   position: relative;
   left: 50%;
@@ -383,6 +383,7 @@ section .box {
 
 section h1 {
   text-align: center;
+  padding: 10px 0;
   /* border: 1px solid red; */
 }
 
@@ -391,7 +392,7 @@ section .projects {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 /* Content box styling  */
@@ -498,8 +499,12 @@ section .content:hover {
     font-size: 10px;
   }
 }
-
-@media (max-width: 380px) {
+.wrapper .content {
+  width: 145px;
+  padding: 5px;
+  height: 200px;
+}
+@media (max-width: 350px) {
   .wrapper .content {
     width: 100%;
     padding: 10px;
@@ -692,15 +697,15 @@ section .social i {
 .box .box-1 .head {
   font-size: 20px;
   font-weight: 900;
-  padding: 10px 0;
-  text-align: center;
+  /* padding: 10px 0; */
+  text-align: left;
 }
 
 .box .box-1 .text {
   text-align: justify;
   color: var(--text-color);
   /* border: 2px solid yellow; */
-  padding: 10px;
+  padding: 10px 0;
 }
 
 .box .skill-img {
@@ -991,9 +996,8 @@ aside {
   background-color: var(--btn-hover-background);
 }
 
-
 /* blog left right responsive */
-@media (max-width:1191px) {
+@media (max-width: 1191px) {
   .wrapper .card-3 {
     width: 250px;
     padding: 10px;
@@ -1013,13 +1017,13 @@ aside {
     padding: 0;
   }
 }
-@media (max-width:973px) {
+@media (max-width: 973px) {
   .wrapper .card-3 {
     width: 220px;
     height: 270px;
   }
 }
-@media (max-width:882px) {
+@media (max-width: 882px) {
   .wrapper .card-3 {
     width: 180px;
   }
@@ -1037,7 +1041,7 @@ aside {
     padding: 0;
   }
 }
-@media (max-width:875px) {
+@media (max-width: 875px) {
   .wrapper .card-3 {
     width: 180px;
     height: 230px;
@@ -1045,7 +1049,7 @@ aside {
   .wrapper .card-3 .head {
     font-size: 12px;
   }
-  .wrapper .card-3 .text{
+  .wrapper .card-3 .text {
     font-size: 8px;
   }
   .wrapper .card-3 .btn .date {
@@ -1060,20 +1064,30 @@ aside {
     padding: 0;
   }
 }
-@media (max-width:650px){
-  .blogbox{
+@media (max-width: 650px) {
+  .blogbox {
     flex-direction: column;
     /* border: 1px solid red; */
   }
-  .blogbox .blogLeft{
+  .blogbox .blogLeft {
     width: 100%;
   }
-  .blogbox aside{
-    width:100%;
+  .blogbox aside {
+    width: 100%;
     margin-left: 0;
   }
 }
-
+@media (max-width: 439px){
+  .wrapper .card-3 {
+    width: 145px;
+    padding: 5px;
+    height: 200px;
+  }
+  .wrapper .card-3 .btn .btn-1 a {
+    padding: 3px 20px;
+    font-size: 12px;
+  }
+} 
 /* Connect Us Styling */
 .blog-connect {
   /* border: 1px solid red; */
@@ -1086,6 +1100,7 @@ aside {
 .blog-connect .input .email {
   padding: 10px 0;
   text-align: center;
+  outline: none;
   border: 1px solid rgba(0, 0, 0, 0.186);
 }
 
@@ -1100,7 +1115,7 @@ aside {
   cursor: pointer;
   transition: all 0.5s ease;
 }
-.blog-connect .input .subscribe:hover{
+.blog-connect .input .subscribe:hover {
   background-color: var(--btn-hover-background);
 }
 .blog-connect .input .inpult-field {
@@ -1411,7 +1426,35 @@ footer .pages a:hover {
   }
 }
 
-.Red{
+.Red {
   text-align: justify;
   padding-bottom: 25px;
+}
+
+/* Ads components stylings */
+
+.ads-box {
+  background-color: var(--body-background);
+  padding: 10px 0 20px 0;
+}
+.ads-box h3 {
+  padding: 10px 0;
+  text-align: center;
+}
+.ads-box .ads-cards {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.ads-box .ads-cards .ads-card {
+  background-color: rgb(184, 184, 184);
+  height: 200px;
+  width: 200px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }

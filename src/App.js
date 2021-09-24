@@ -6,6 +6,8 @@ import Blog from "./components/Blog";
 import Services from "./components/Services";
 import Footer from "./components/Footer";
 import JoinUs from "./components/JoinUs";
+import About from "./components/About";
+import AdsComponents from "./components/AdsComponents";
 
 import React from "react";
 import {
@@ -32,6 +34,9 @@ function App() {
           <Route path="/Services">
             <Services />
           </Route>
+          <Route path="/About">
+            <About/>
+          </Route>
           <Route path="/JoinUs">
              <JoinUs/>
           </Route>
@@ -39,6 +44,7 @@ function App() {
              <Home/>
           </Route>
     </Switch>
+    <AdsComponents/>
     <Footer/>
    </Router>
    </>

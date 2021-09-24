@@ -32,6 +32,7 @@ export default function Home() {
                     <i className="bi bi-telegram"></i>
                 </div>
     </section>
+    
     <SkillsBar/>
     <Gallary/>
     

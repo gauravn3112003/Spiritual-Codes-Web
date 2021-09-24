@@ -4,9 +4,6 @@ import "../App.css";
 export default function SkillsBar() {
     return (
         <div className="box">
-            <h1 id="skill" data-aos="fade-down">
-                Skills
-            </h1>
 
             <div className="box-1">
                 <div className="head" data-aos="fade-down">

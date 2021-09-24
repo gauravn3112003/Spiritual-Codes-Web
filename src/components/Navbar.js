@@ -51,7 +51,7 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <Link className="click" to="/">
+              <Link className="click" to="/About">
                 <i class="bi bi-person-fill"></i>
                 About Us
               </Link>
