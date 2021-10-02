@@ -47,13 +47,3 @@ $(document).ready(function() {
 
 
 
-
-// nav text clicked script
-const navLink = document.querySelectorAll('.click')
-function linkAction() {
-    navLink.forEach(n => n.classList.remove('clicked'))
-    this.classList.add('clicked')
-
-    
-}
-navLink.forEach(n => n.addEventListener('click', linkAction))

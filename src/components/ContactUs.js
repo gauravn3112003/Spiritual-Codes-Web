@@ -1,20 +1,22 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
+import contactContext from "../Context/Contact/contactContext"; 
 import "../App.css";
 
 export default function ContactUs() {
-    const [audience, setAudience] = useState({
-        name:"", email:"", number:"", message:"" 
-    });
-
-
-    let name, value;    
-    const handleInputs =(e) =>{
-            console.log(e);
-            name =e.target.name;
-            value =e.target.value;
-            setAudience({...audience, [name]:value});
-
+  const context = useContext(contactContext);
+  const {addContact} = context;
+  
+    const [contact, setContact] = useState({name:"", email:"", number:"", message:""});
+    const {name, email, number, message} = contact;
+    
+    
+    const handleInputs = (e) =>{
+      setContact({...contact,[e.target.name]: e.target.value })
     }
+    const handleClick = (e)=>{
+      e.preventDefault();
+      addContact(name,email,number,message);
+  }
 
 
   return (
@@ -44,7 +46,7 @@ export default function ContactUs() {
                       </div>
                       <div className="input" data-aos="fade-down">
                         <input
-                          type="text" name="name" value={audience.name} onChange={handleInputs}
+                          type="text" name="name" onChange={handleInputs}
                           required
                           className="input-data da"
                           id=""
@@ -58,7 +60,7 @@ export default function ContactUs() {
                       </div>
                       <div className="input" data-aos="fade-down">
                         <input
-                          type="email" name="email" value={audience.email} onChange={handleInputs}
+                          type="email" name="email" onChange={handleInputs}
                           required
                           className="input-data da"
                           id=""
@@ -72,7 +74,7 @@ export default function ContactUs() {
                       </div>
                       <div className="input" data-aos="fade-down">
                         <input
-                          type="number" name="number" value={audience.number} onChange={handleInputs}
+                          type="number" name="number" onChange={handleInputs}
                           className="input-data da"
                           id=""
                         />
@@ -85,7 +87,7 @@ export default function ContactUs() {
                       </div>
                       <div className="input" data-aos="fade-down">
                         <textarea
-                     name="message" value={audience.message} onChange={handleInputs}
+                     name="message" onChange={handleInputs}
                           required
                           className="input-data"
                           id=""
@@ -98,6 +100,7 @@ export default function ContactUs() {
                       <input
                         type="submit"
                         data-aos="fade-down"
+                        onClick={handleClick}
                         className="btn-sub"
                         value="Submit"
                       />
