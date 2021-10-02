@@ -1,12 +1,7 @@
 import React, {useState} from "react";
 import "../App.css";
-// import {useHistory
-//   } from "react-router-dom";
-import { Helmet } from "react-helmet";
 
 export default function ContactUs() {
-    // const history = useHistory();
-    // const host ="http://localhost:5000";
     const [audience, setAudience] = useState({
         name:"", email:"", number:"", message:"" 
     });
@@ -21,37 +16,9 @@ export default function ContactUs() {
 
     }
 
-    // const PostData = async (e) =>{
-    //     e.preventDeafault();
-
-    //     const {name, email, number, message} = audience;
-    //     const response = await fetch(`/api/user_routes/createuser`, {
-    //         method: 'POST', // *GET, POST, PUT, DELETE, etc.
-    //         mode: 'no-cors',
-    //         headers: {
-    //           'Content-Type': 'application/json'
-    //         },
-    //         body: JSON.stringify({
-    //             name, email, number, message
-    //         }) // body data type must match "Content-Type" header
-    //       });
-    //       const data = await response.json(); 
-
-    //       if(data.status === 400 || !data){
-    //           window.alert("Registration Unsuccessfully");
-    //       }else{
-    //         window.alert("Registration successfully");
-
-    //         history.pushState("/ContactUs");
-    //       }
-    // }
-
 
   return (
     <section className="wrapper">
-      <Helmet>
-        <title>Spiritual Codes - Contact Us</title>
-      </Helmet>
       <div className="box">
         <h1>Contact Us</h1>
         <div className="projects">
@@ -69,7 +36,7 @@ export default function ContactUs() {
                 alt=""
               />
               <div className="form">
-                <form method="POST">
+                <form >
                   <div className="data">
                     <div className="input-box">
                       <div className="text" data-aos="fade-down">
@@ -130,7 +97,6 @@ export default function ContactUs() {
                     <div className="btn">
                       <input
                         type="submit"
-                        // onClick={PostData}
                         data-aos="fade-down"
                         className="btn-sub"
                         value="Submit"

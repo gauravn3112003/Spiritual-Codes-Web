@@ -419,6 +419,7 @@ section .content:hover {
 }
 
 /* conetnt box responsie */
+
 @media (max-width: 825px) {
   .wrapper .content {
     width: 200px;
@@ -498,11 +499,11 @@ section .content:hover {
     border-radius: 5px;
     font-size: 10px;
   }
-}
-.wrapper .content {
-  width: 145px;
-  padding: 5px;
-  height: 200px;
+  .wrapper .content {
+    width: 145px;
+    padding: 5px;
+    height: 200px;
+  }
 }
 @media (max-width: 350px) {
   .wrapper .content {
