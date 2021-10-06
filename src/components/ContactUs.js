@@ -1,23 +1,40 @@
-import React, {useContext, useState} from "react";
-import contactContext from "../Context/Contact/contactContext"; 
+import React, { useState } from "react";
+// import { useHistory } from "react-router";
 import "../App.css";
 
 export default function ContactUs() {
-  const context = useContext(contactContext);
-  const {addContact} = context;
-  
-    const [contact, setContact] = useState({name:"", email:"", number:"", message:""});
-    const {name, email, number, message} = contact;
-    
-    
-    const handleInputs = (e) =>{
-      setContact({...contact,[e.target.name]: e.target.value })
-    }
-    const handleClick = (e)=>{
-      e.preventDefault();
-      addContact(name,email,number,message);
-  }
+  const host = "http://localhost:5000";
+  // const history = useHistory();
+  const [contact, setContact] = useState({
+    name: "",
+    email: "",
+    number: "",
+    message: "",
+  });
+  const onChange = (e) => {
+    setContact({ ...contact, [e.target.name]: e.target.value });
+  };
 
+  const postData = async (e) => {
+    e.preventDefault();
+    const { name, email, number, message } = contact;
+    const res = await fetch(`${host}/api/user_routes/createuser`,{
+      method:"POST",
+      headers:{
+        "Content-Type":"application/json"
+      },
+      body:JSON.stringify({
+        name, email, number, message 
+      })
+    })
+    const data = await res.json();
+    if(res.status=== 500 || !data){
+      window.alert("Invalid registration");
+    }else{
+      window.alert("registration Successfull");
+
+    }
+  };
 
   return (
     <section className="wrapper">
@@ -38,7 +55,7 @@ export default function ContactUs() {
                 alt=""
               />
               <div className="form">
-                <form >
+                <form>
                   <div className="data">
                     <div className="input-box">
                       <div className="text" data-aos="fade-down">
@@ -46,10 +63,12 @@ export default function ContactUs() {
                       </div>
                       <div className="input" data-aos="fade-down">
                         <input
-                          type="text" name="name" onChange={handleInputs}
+                          type="text"
+                          name="name"
                           required
                           className="input-data da"
                           id=""
+                          onChange={onChange}
                         />
                       </div>
                     </div>
@@ -60,10 +79,12 @@ export default function ContactUs() {
                       </div>
                       <div className="input" data-aos="fade-down">
                         <input
-                          type="email" name="email" onChange={handleInputs}
+                          type="email"
+                          name="email"
                           required
                           className="input-data da"
                           id=""
+                          onChange={onChange}
                         />
                       </div>
                     </div>
@@ -74,9 +95,11 @@ export default function ContactUs() {
                       </div>
                       <div className="input" data-aos="fade-down">
                         <input
-                          type="number" name="number" onChange={handleInputs}
+                          type="number"
+                          name="number"
                           className="input-data da"
                           id=""
+                          onChange={onChange}
                         />
                       </div>
                     </div>
@@ -87,10 +110,11 @@ export default function ContactUs() {
                       </div>
                       <div className="input" data-aos="fade-down">
                         <textarea
-                     name="message" onChange={handleInputs}
+                          name="message"
                           required
                           className="input-data"
                           id=""
+                          onChange={onChange}
                           cols="30"
                           rows="10"
                         ></textarea>
@@ -100,8 +124,8 @@ export default function ContactUs() {
                       <input
                         type="submit"
                         data-aos="fade-down"
-                        onClick={handleClick}
                         className="btn-sub"
+                        onClick={postData}
                         value="Submit"
                       />
                     </div>
