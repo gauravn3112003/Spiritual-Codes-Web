@@ -11,6 +11,7 @@ import AdsComponents from "./components/AdsComponents";
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ContactState from "./Context/Contact/ContactState";
+import LoginAdmin from "./components/LoginAdmin";
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
         <Router>
           <Navbar />
           <Switch>
+          <Route path="/LoginAdmin">
+              <LoginAdmin/>
+            </Route>
             <Route path="/ContactUs">
               <ContactUs />
             </Route>

@@ -69,6 +69,7 @@ export default function ContactUs() {
                           className="input-data da"
                           id=""
                           onChange={onChange}
+                          value={contact.name}
                         />
                       </div>
                     </div>
@@ -85,6 +86,7 @@ export default function ContactUs() {
                           className="input-data da"
                           id=""
                           onChange={onChange}
+                          value={contact.email}
                         />
                       </div>
                     </div>
@@ -100,6 +102,7 @@ export default function ContactUs() {
                           className="input-data da"
                           id=""
                           onChange={onChange}
+                          value={contact.number}
                         />
                       </div>
                     </div>
@@ -115,6 +118,7 @@ export default function ContactUs() {
                           className="input-data"
                           id=""
                           onChange={onChange}
+                          value={contact.message}
                           cols="30"
                           rows="10"
                         ></textarea>

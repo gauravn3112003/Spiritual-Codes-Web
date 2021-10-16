@@ -8,6 +8,7 @@ function bcard(val) {
     return (
       <BlogCard
         image={val.image}
+        tag={val.tag}
         head={val.head}
         descri={val.descri}
         date={val.date}

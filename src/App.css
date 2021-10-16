@@ -159,7 +159,6 @@ body {
 
 .navbar ul li a:hover {
   color: var(--btn-hover-background);
-  /* border-bottom: 5px solid rgb(17, 0, 255); */
 }
 
 .navbar ul .btn {
@@ -305,7 +304,7 @@ body {
     margin-left: 0px;
   }
   .clicked {
-    color: blue;
+    color: red;
   }
   .navbar ul .btn {
     position: absolute;
@@ -357,9 +356,7 @@ body {
     align-items: center;
   }
 }
-.clicked {
-  color: blue;
-}
+
 /* main format styling  */
 body .wrapper {
   /* padding: 5px; */
@@ -842,7 +839,11 @@ section .social i {
   transition: 0.3s ease-in;
   cursor: pointer;
 }
-
+.wrapper .content .tag{
+  color: blue;
+  font-weight: 800;
+  width: 100%;
+}
 .wrapper .content .head {
   /* border: 1px solid red; */
   width: 100%;
@@ -913,7 +914,23 @@ aside {
   margin-left: 5px;
   overflow-y: scroll;
 }
-
+/*Search Blog styling */
+.search form{
+  
+  position: relative;
+}
+.serach-area{
+  padding: 10px 0;
+  width: 100%;
+}
+.search form i{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  color: red;
+  font-size: 20px;
+}
 /* popular post styling */
 
 .popular-side {

@@ -6,7 +6,7 @@ export default function ConnectUs() {
       <form action="">
         <div className="input">
           <input
-            type="email"
+            type="email" 
             className="inpult-field email"
             placeholder="Enter the e-mail"
           />

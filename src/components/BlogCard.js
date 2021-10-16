@@ -10,6 +10,9 @@ export default function BlogCard(props) {
         width="30px"
         alt="project1"
       />
+      <div className="tag">
+        #{props.tag}
+      </div>
       <div className="head" data-aos="fade-down">
         {props.head}
       </div>
