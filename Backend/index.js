@@ -26,6 +26,7 @@ app.use(express.json());
 // });
 
 app.use('/api/user_routes', require ('./routes/user_routes'));
+app.use('/api/connect-us-routes', require ('./routes/connect-us-routes'));
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);

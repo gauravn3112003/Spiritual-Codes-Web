@@ -12,13 +12,13 @@ router.post("/createuser",[
  
   ] ,async (req, res) => {
     
-    try {
     //if theree are errors , return bad request
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
     
+    try {
     const { name , email, number, message  } = req.body;
     const create = await Contact.create({
         name, email,number,message
