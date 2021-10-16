@@ -100,7 +100,7 @@ export default function Navbar() {
               <Link className={`click ${
                   location.pathname === "/LoginAdmin" ? "clicked" : ""
                 }`} to="/LoginAdmin">
-                <i class="bi bi-search"></i>
+                <i class="bi bi-box-arrow-in-right"></i>
                 Login
               </Link>
             </li>

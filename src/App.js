@@ -12,6 +12,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ContactState from "./Context/Contact/ContactState";
 import LoginAdmin from "./components/LoginAdmin";
+import ErrorPage from "./components/ErrorPage";
 
 function App() {
   return (
@@ -38,9 +39,8 @@ function App() {
             <Route path="/JoinUs">
               <JoinUs />
             </Route>
-            <Route path="/">
-              <Home />
-            </Route>
+            <Route exact path="/" component={Home} />
+          <Route component={ErrorPage} />
           </Switch>
           <AdsComponents />
           <Footer />

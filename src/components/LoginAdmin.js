@@ -15,7 +15,7 @@ export default function LoginAdmin() {
               <h2>Login</h2>
               <div className="input-box">
                 <div className="icon-login" >
-                  <i class="bi bi-person"></i>
+                  <i class="bi bi-person-fill"></i>
                 </div>
                 <div className="input" data-aos="fade-down">
                   <input type="email" className="input-login" placeholder="Enter the E-mail" name="" id="" />
@@ -24,7 +24,7 @@ export default function LoginAdmin() {
 
               <div className="input-box">
                 <div className="icon-login" >
-                  <i class="bi bi-lock"></i>
+                  <i class="bi bi-key-fill"></i>
                 </div>
                 <div className="input" data-aos="fade-down">
                   <input type="password" className="input-login" name="" placeholder="Enter the Password" id="" />

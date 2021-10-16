@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+.error {
+  width: 100%;
+  height: 100vh;
+  background-color: transparent;
+  /* margin-top: 60px; */
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+.error::before{
+   content: "404";
+   position: absolute;
+   font-size: 400px;
+   left: 50%;
+   font-weight: 800;
+   color: var(--btn-background);
+   top: 50%;
+   opacity: 10%;
+   transform: translate(-50%,-50%);
+   z-index: -1;
+   text-shadow:3px 3px 10px black;
+
+    
+}
+.error .message {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  margin-top: 60px;
+  /* padding-top: 80px; */
+  /* border: 1px solid red; */
+}
+.error .error-code {
+  font-size: 200px;
+  font-weight: 800;
+  display: grid;
+  /* opacity: 50%; */
+  place-items: center;
+}
+.error .error-code img{
+    width: 300px;
+}
+.error .message-second {
+  font-size: 50px;
+  text-align: center;
+  font-family: "Prata", serif;
+}
+.error .message-long {
+  text-align: center;
+
+  max-width: 800px;
+  color: rgba(0, 0, 0, 0.838);
+  font-weight: 1000px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.error .error-btn {
+  /* border: 1px solid red; */
+  padding: 10px 0;
+  width: 100%;
+  margin-top: 10px;
+  position: relative;
+  height: 60px;
+}
+.error .error-btn a {
+  background-color: var(--btn-background);
+  padding: 10px 50px;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  transition: .5s ease;
+  text-transform: uppercase;
+}
+.error .error-btn a:hover{
+    background-color: var(--btn-hover-background);
+}
+
+@media (max-width: 770px){
+    .error::before{
+        content: "404";
+        font-size: 150px;
+        left: 50%;
+     
+         
+     }
+     .error .message-second{
+         font-size: 40px;
+     }
+     .error .message-long{
+         
+     }
+     .error .error-btn a{
+         padding: 10px 20px;
+
+     }
+}
