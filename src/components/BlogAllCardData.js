@@ -25,23 +25,6 @@ export default function BlogAllCardData() {
   useEffect(()=>{
     getBlog();
   },[])
-
-
-  // const blogsInitial =[];
-  // const [blogs, setBlogs] = useState(blogsInitial);
-  
-  // const host = "http://localhost:5000";
-  // const getBlog = async () => {
-  //   const res = await fetch(`${host}/api/createPost/fetchAllBlog`,{
-  //     method:"GET",
-  //     headers:{
-  //       "Content-Type":"application/json"
-  //     },
-  //   })
-  //   const json = await res.json();
-  //   console.log(json);
-  //   setBlogs(json)
-  // };
  
     return (
         <>
