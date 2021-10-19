@@ -1,9 +1,11 @@
 import React from 'react'
 import "../App.css";
+
+
 export default function BlogScreen() {
     return (
         <div className="Red">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, quidem officia. Labore quaerat in deserunt doloremque, vero possimus, quo tempore officia fugit voluptatibus sunt. Cupiditate id omnis saepe ad pariatur at assumenda itaque, nobis dignissimos ipsa praesentium commodi temporibus eligendi ab repudiandae dicta natus! Pariatur maxime placeat omnis culpa doloremque fuga eum nam tenetur vitae modi, explicabo expedita dolores laudantium ipsam natus aspernatur provident voluptas. Nihil repellat, earum similique labore debitis ad, officia sint assumenda eius porro fugit enim corporis at mollitia eum cupiditate dolor veritatis voluptatibus. Odit, totam? Itaque, repellendus. Tenetur deserunt consectetur praesentium sit, in repudiandae natus commodi sunt neque repellat. Magni earum eaque expedita pariatur, eveniet cupiditate ratione modi obcaecati consequuntur ipsam id minus fugiat aliquam soluta quas, illo perspiciatis impedit, nesciunt quibusdam numquam. Ipsa rem excepturi illum perferendis cum! Voluptates fugit ipsum minus nostrum deleniti, temporibus ducimus! Iusto iste quam neque animi ducimus fuga totam? Officia corporis nobis labore et esse consectetur omnis voluptate iste temporibus repellendus fugit facere aliquid, inventore adipisci totam quaerat sequi nam accusamus ab dolore. Consectetur facilis, omnis vel in voluptatem molestiae corrupti. Earum omnis quam unde non ut. Reprehenderit fugiat quidem aut ducimus deserunt suscipit. Culpa nemo, recusandae omnis beatae, tempora nulla et quibusdam modi unde aperiam earum pariatur cumque. Ipsa ab reiciendis autem fugiat aspernatur iste et dolores deleniti sed cumque quibusdam placeat similique vitae assumenda, maiores adipisci exercitationem hic magnam saepe! Qui consectetur, corrupti recusandae itaque laboriosam provident odio, officia, placeat consequuntur esse nam ipsum fugiat est error tempore odit voluptatum possimus repudiandae pariatur! Cupiditate sed nobis numquam temporibus hic aliquid veritatis laborum nam eligendi voluptas fuga iste, repellat voluptate velit veniam pariatur dicta commodi delectus inventore necessitatibus illo non. Iure exercitationem magni ducimus facere dolorum explicabo quibusdam numquam quaerat enim voluptate. Tenetur fuga quam, quidem amet enim vero!
+            
         </div>
     )
 }

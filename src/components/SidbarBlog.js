@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useEffect, useContext } from 'react'
 import "../App.css";
-import Blogdetail from "../Blogdetail";
 import ConnectUs from "./ConnectUs";
 import Popularpost from "./Popularpost";
+import contactContext from '../Context/Contact/contactContext';
 function scard(val) {
-  return <Popularpost image={val.image} head={val.head} date={val.date} />;
+  return <Popularpost image={val.image} head={val.title} date={val.date} />;
 }
 
 export default function SidbarBlog() {
+
+  const context = useContext(contactContext);
+  const {blogs,getBlog} = context;
+  useEffect(()=>{
+    getBlog()
+  },[])
+
   return (
     <aside>
       <div className="popular-side">
@@ -21,7 +28,7 @@ export default function SidbarBlog() {
       </div>
       <div className="popular-side">
         <div className="blog-side">Popoular Post</div>
-        <div className="popular-post">{Blogdetail.map(scard)}</div>
+        <div className="popular-post">{blogs.map(scard)}</div>
       </div>
       <div className="popular-side">
         <div className="blog-side">Connect Us</div>

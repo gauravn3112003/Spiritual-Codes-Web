@@ -33,7 +33,7 @@ email
 
   return (
     <div className="blog-connect">
-      <form action="">
+      <form method="POST">
         <div className="input">
           <input
             type="email" 

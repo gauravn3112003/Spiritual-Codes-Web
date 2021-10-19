@@ -15,7 +15,7 @@ export default function Blog() {
             <div className="blogbox">
             <div className="blogLeft">
               <Switch>
-                <Route path="/BlogOpen">
+                <Route path="/Blog/BlogOpen">
                   <BlogScreen/>
                 </Route>
                 <Route path="/">

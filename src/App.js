@@ -13,6 +13,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import ContactState from "./Context/Contact/ContactState";
 import LoginAdmin from "./components/LoginAdmin";
 import ErrorPage from "./components/ErrorPage";
+import Dashboard from "./components/DashBoard/Dashboard";
 
 function App() {
   return (
@@ -38,6 +39,9 @@ function App() {
             </Route>
             <Route path="/JoinUs">
               <JoinUs />
+            </Route>
+            <Route path="/Dashboard">
+              <Dashboard/>
             </Route>
             <Route exact path="/" component={Home} />
           <Route component={ErrorPage} />

@@ -3,7 +3,7 @@ const ConnectUs = require("../Model/ConnectUs");
 const router = express.Router();
 const { body, validationResult } = require("express-validator");
 
-//Routes 1:  create a user using : POST "/api/adduser/createuser"
+//Routes 1:  to add E-mail Id  using : POST "/api/connect-us-routes/connectUs"
 router.post(
   "/connectUs",
   [body("email", "E-mail is already exist").isEmail()],

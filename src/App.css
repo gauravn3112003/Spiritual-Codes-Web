@@ -889,6 +889,7 @@ section .social i {
   display: flex;
   flex-wrap: wrap;
   width: 65%;
+  flex-direction: row-reverse;
   /* margin: 5px; */
   justify-content: center;
   height: 100vh;

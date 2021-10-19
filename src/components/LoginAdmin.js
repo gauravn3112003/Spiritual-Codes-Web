@@ -1,12 +1,12 @@
 import React from "react";
 import  "./Styling/login.css"
-
+import { Link } from "react-router-dom";
 export default function LoginAdmin() {
   return (
     <>
       <section className="wrapper">
         <div className="box">
-          <h1>Login</h1>
+          {/* <h1>Login</h1> */}
           <div className="login">
             <form>
               <div className="img-login">
@@ -18,7 +18,7 @@ export default function LoginAdmin() {
                   <i class="bi bi-person-fill"></i>
                 </div>
                 <div className="input" data-aos="fade-down">
-                  <input type="email" className="input-login" placeholder="Enter the E-mail" name="" id="" />
+                  <input type="email" className="input-login" placeholder="Enter the E-mail" />
                 </div>
               </div>
 
@@ -27,11 +27,11 @@ export default function LoginAdmin() {
                   <i class="bi bi-key-fill"></i>
                 </div>
                 <div className="input" data-aos="fade-down">
-                  <input type="password" className="input-login" name="" placeholder="Enter the Password" id="" />
+                  <input type="password" className="input-login"  placeholder="Enter the Password" />
                 </div>
               </div>
               <div className="checkbox">
-                <input  type="checkbox" name="" id="" />
+                <input  type="checkbox" />
                 Remember the password ?
               </div>
               <div className="btn">
@@ -41,6 +41,7 @@ export default function LoginAdmin() {
                   className="btn-sub"
                   value="Submit"
                 />
+                <Link to="/Dashboard">check</Link>
               </div>
             </form>
           </div>

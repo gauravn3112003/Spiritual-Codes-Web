@@ -3,7 +3,7 @@ const Contact = require("../Model/Contact");
 const router = express.Router();
 const { body, validationResult } = require("express-validator");
 
-//Routes 1:  create a user using : POST "/api/adduser/createuser"
+//Routes 1:  create a user using : POST "/api/user_routes/createuser"
 router.post("/createuser",[
     body("name", "Enter valid name").isLength({ min: 3 }),
     body("email", "Enter a valid email").isEmail(),

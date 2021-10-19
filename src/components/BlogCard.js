@@ -22,7 +22,7 @@ export default function BlogCard(props) {
       <div className="btn" data-aos="fade-down">
         <div className="date">Date: {props.date}</div>
         <div className="btn-1">
-          <Link to="/BlogOpen" > View</Link>
+          <Link to="/Blog/BlogOpen" > View</Link>
         </div>
       </div>
     </div>
