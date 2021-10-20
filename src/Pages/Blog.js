@@ -1,9 +1,9 @@
 import React from "react";
 import "../App.css";
-import BlogAllCardData from "./BlogAllCardData";
-import SidbarBlog from "./SidbarBlog";
+import BlogAllCardData from "../components/BlogAllCardData";
+import SidbarBlog from "../components/SidbarBlog";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import BlogScreen from "./BlogScreen";
+import BlogScreen from "../components/BlogScreen";
 
 export default function Blog() {
   return (

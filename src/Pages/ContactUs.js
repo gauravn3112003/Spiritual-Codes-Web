@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 // import { useHistory } from "react-router";
+import contactContext from "../Context/Contact/contactContext";
+
 import "../App.css";
 
 export default function ContactUs() {
-  const host = "http://localhost:5000";
+  // const host = "http://localhost:5000";
+  const context = useContext(contactContext);
+  const {addContact} = context;
   // const history = useHistory();
   const [contact, setContact] = useState({
     name: "",
@@ -18,23 +22,9 @@ export default function ContactUs() {
   const postData = async (e) => {
     e.preventDefault();
     const { name, email, number, message } = contact;
-    const res = await fetch(`${host}/api/user_routes/createuser`,{
-      method:"POST",
-      headers:{
-        "Content-Type":"application/json"
-      },
-      body:JSON.stringify({
-        name, email, number, message 
-      })
-    })
-    const data = await res.json();
-    if(res.status=== 500 || !data){
-      window.alert("Invalid registration");
-    }else{
-      window.alert("registration Successfull");
-
-    }
-  };
+    addContact(name, email, number, message);
+    
+  }
 
   return (
     <section className="wrapper">

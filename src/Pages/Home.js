@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import "../App.css";
-import Gallary from './Gallary';
-import SkillsBar from './SkillsBar';
+import Gallary from '../components/Gallary';
+import SkillsBar from '../components/SkillsBar';
 export default function Home() {
     return (
     <>

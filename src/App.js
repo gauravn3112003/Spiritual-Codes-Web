@@ -1,19 +1,20 @@
+import LoginAdmin from "./Pages/LoginAdmin";
+import ContactUs from "./Pages/ContactUs";
+import About from "./Pages/About";
+import Home from "./Pages/Home";
+import Blog from "./Pages/Blog";
+import JoinUs from "./Pages/JoinUs";
+import Services from "./Pages/Services";
+
 import Navbar from "./components/Navbar";
-import ContactUs from "./components/ContactUs";
-import Home from "./components/Home";
-import Blog from "./components/Blog";
-import Services from "./components/Services";
 import Footer from "./components/Footer";
-import JoinUs from "./components/JoinUs";
-import About from "./components/About";
 import AdsComponents from "./components/AdsComponents";
+import ContactState from "./Context/Contact/ContactState";
+import ErrorPage from "./components/ErrorPage";
+import Dashboard from "./components/DashBoard/Dashboard";
 
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import ContactState from "./Context/Contact/ContactState";
-import LoginAdmin from "./components/LoginAdmin";
-import ErrorPage from "./components/ErrorPage";
-import Dashboard from "./components/DashBoard/Dashboard";
 
 function App() {
   return (

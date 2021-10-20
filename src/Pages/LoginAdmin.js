@@ -1,5 +1,5 @@
 import React from "react";
-import  "./Styling/login.css"
+import  "../components/Styling/login.css"
 import { Link } from "react-router-dom";
 export default function LoginAdmin() {
   return (

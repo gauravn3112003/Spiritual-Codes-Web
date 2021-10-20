@@ -2,7 +2,7 @@ import React from "react";
 
 import "../App.css";
 
-import SkillsBar from "./SkillsBar";
+import SkillsBar from "../components/SkillsBar";
 export default function About() {
   return (
     <section className="wrapper">
