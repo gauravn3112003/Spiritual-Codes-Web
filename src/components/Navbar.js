@@ -96,14 +96,7 @@ export default function Navbar() {
                 About Us
               </Link>
             </li>
-            <li>
-              <Link className={`click ${
-                  location.pathname === "/LoginAdmin" ? "clicked" : ""
-                }`} to="/LoginAdmin">
-                <i class="bi bi-box-arrow-in-right"></i>
-                Login
-              </Link>
-            </li>
+            
           </div>
           <div class="close">
             <i class="fas fa-times-circle"></i>

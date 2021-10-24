@@ -31,4 +31,19 @@ router.post("/createuser",[
   }
 });
 
+
+
+//Routes 2:  To fetch all counts Contact Us  data : get "/api/user_routes/countContact"
+router.get("/countContact", async (req, res) => {
+  try {
+    const countContact = await Contact.find().countDocuments();
+    console.log(countContact);
+    res.json(countContact);
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+
+
 module.exports = router;

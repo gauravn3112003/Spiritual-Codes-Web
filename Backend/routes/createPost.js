@@ -23,7 +23,11 @@ router.post(
       // to create database table
       const { title, image, tag, description, mainData } = req.body;
       const create = await createPost.create({
-        title, image, tag, description, mainData
+        title,
+        image,
+        tag,
+        description,
+        mainData,
       });
       res.status(201).send(create);
     } catch (error) {
@@ -33,11 +37,19 @@ router.post(
 );
 
 //Routes 2:  To fetch all blog post data : get "/api/createPost/fetchAllBlog"
-router.get(
-  "/fetchAllBlog",
-  async (req, res) => {
-    const posts = await createPost.find();
-    res.json(posts);
+router.get("/fetchAllBlog", async (req, res) => {
+  const posts = await createPost.find();
+  res.json(posts);
+});
+
+//Routes 3:  To fetch all counts blog post data : get "/api/createPost/countAllBlog"
+router.get("/countAllBlog", async (req, res) => {
+  try {
+    const countBlog = await createPost.find().countDocuments();
+    console.log(countBlog);
+    res.json(countBlog);
+  } catch (error) {
+    console.log(error);
   }
-)
+});
 module.exports = router;

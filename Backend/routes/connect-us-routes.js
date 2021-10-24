@@ -34,4 +34,15 @@ router.post(
   }
 );
 
+
+//Routes 2:  To fetch all counts Connect Us  data : get "/api/connect-us-routes/connectCounts"
+router.get("/connectCounts", async (req, res) => {
+  try {
+    const countConnect = await ConnectUs.find().countDocuments();
+    console.log(countConnect);
+    res.json(countConnect);
+  } catch (error) {
+    console.log(error);
+  }
+});
 module.exports = router;
