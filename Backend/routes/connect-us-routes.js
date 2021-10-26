@@ -33,9 +33,13 @@ router.post(
     }
   }
 );
+//Routes 2:  To fetch all Connect Us  data : get "/api/connect-us-routes/fetchAllConnect"
+router.get("/fetchAllConnect", async (req, res) => {
+  const connect = await ConnectUs.find();
+  res.json(connect);
+});
 
-
-//Routes 2:  To fetch all counts Connect Us  data : get "/api/connect-us-routes/connectCounts"
+//Routes 3:  To fetch all counts Connect Us  data : get "/api/connect-us-routes/connectCounts"
 router.get("/connectCounts", async (req, res) => {
   try {
     const countConnect = await ConnectUs.find().countDocuments();
@@ -43,6 +47,23 @@ router.get("/connectCounts", async (req, res) => {
     res.json(countConnect);
   } catch (error) {
     console.log(error);
+  }
+});
+
+// ROUTE 4: Delete an existing connect us  using: DELETE "/api/connect-us-routes/deleteConnect". Login required
+router.delete("/deleteConnect/:id", async (req, res) => {
+  try {
+    // Find the note to be delete and delete it
+    let connect = await ConnectUs.findById(req.params.id);
+    if (!connect) {
+      return res.status(404).send("Not Found");
+    }
+
+    connect = await ConnectUs.findByIdAndDelete(req.params.id);
+    res.json({ Success: "Note has been deleted", ConnectUs:ConnectUs});
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send("Internal Server Error");
   }
 });
 module.exports = router;

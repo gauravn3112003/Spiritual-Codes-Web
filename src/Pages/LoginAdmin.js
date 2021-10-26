@@ -12,13 +12,13 @@ export default function LoginAdmin() {
                 <img
                   src="https://cdn.pixabay.com/photo/2015/11/26/00/14/woman-1063100__340.jpg"
                   alt=""
-                  srcset=""
+                  srcSet=""
                 />
               </div>
               <h2>Login</h2>
               <div className="input-box">
                 <div className="icon-login">
-                  <i class="bi bi-person-fill"></i>
+                  <i className="bi bi-person-fill"></i>
                 </div>
                 <div className="input" data-aos="fade-down">
                   <input
@@ -31,7 +31,7 @@ export default function LoginAdmin() {
 
               <div className="input-box">
                 <div className="icon-login">
-                  <i class="bi bi-key-fill"></i>
+                  <i className="bi bi-key-fill"></i>
                 </div>
                 <div className="input" data-aos="fade-down">
                   <input

@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SideNav from "./SideNav";
 import TopDash from "./TopDash";
 import CreatePost from "./CreatePost";
+import AllBlogs from "./AllBlogs";
 export default function Dashboard() {
   return (
     <>
@@ -24,6 +25,9 @@ export default function Dashboard() {
                 </Route>
                 <Route path="/Dashboard/CreatePost">
                   <CreatePost/>
+                </Route>
+                <Route path="/Dashboard/AllBlogs">
+                  <AllBlogs/>
                 </Route>
               </Switch>
             </div>

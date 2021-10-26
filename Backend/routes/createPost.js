@@ -52,4 +52,23 @@ router.get("/countAllBlog", async (req, res) => {
     console.log(error);
   }
 });
+
+// ROUTE 4: Delete an existing Blogs  using: DELETE "/api/createPost/deleteBlog/". 
+router.delete("/deleteBlog/:id", async (req, res) => {
+  try {
+    // Find the note to be delete and delete it
+    let blog = await createPost.findById(req.params.id);
+    if (!blog) {
+      return res.status(404).send("Not Found");
+    }
+
+    blog = await createPost.findByIdAndDelete(req.params.id);
+    res.json({ Success: "Note has been deleted", createPost: createPost });
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send("Internal Server Error");
+  }
+});
+
+
 module.exports = router;

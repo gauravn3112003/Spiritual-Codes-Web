@@ -12,7 +12,7 @@ export default function SideNav() {
         <div className="create-btn">
           <Link 
           className="create-blog-btn" to="/Dashboard/CreatePost">
-            <i class="bi  bi-pencil-square"></i> Create Post
+            <i className="bi  bi-pencil-square"></i> Create Post
           </Link>
 
           <div className="btns-dash">
@@ -24,7 +24,7 @@ export default function SideNav() {
               }`}
               to="/Dashboard/ContactUsData"
             >
-              <i class="bi bi-telephone-fill"></i> Contact Us
+              <i className="bi bi-telephone-fill"></i> Contact Us
             </Link>
             <Link
               className={`click ${
@@ -34,28 +34,32 @@ export default function SideNav() {
               }`}
               to="/Dashboard/ConnectUsData"
             >
-              <i class="bi bi-broadcast-pin"></i> Connect Us
+              <i className="bi bi-broadcast-pin"></i> Connect Us
             </Link>
-            <Link href="/">
-              <i class="bi bi-globe2"></i> Join Us
+            <Link to="/">
+              <i className="bi bi-globe2"></i> Join Us
             </Link>
-            <Link href="/">
-              <i class="bi bi-calendar3-fill"></i> All Blogs
+            <Link className={`click ${
+                location.pathname === "/Dashboard/AllBlogs"
+                  ? "click-nav"
+                  : ""
+              }`} to="/Dashboard/AllBlogs">
+              <i className="bi bi-calendar3-fill"></i> All Blogs
             </Link>
-            <Link href="/">
-              <i class="bi bi-bag-check-fill"></i> Services
+            <Link to="/">
+              <i className="bi bi-bag-check-fill"></i> Services
             </Link>
-            <Link href="/">
-              <i class="bi bi-question-circle-fill"></i> Quizes
+            <Link to="/">
+              <i className="bi bi-question-circle-fill"></i> Quizes
             </Link>
-            <Link href="/">
-            <i class="bi bi-gear-fill"></i> Setting
+            <Link to="/">
+            <i className="bi bi-gear-fill"></i> Setting
             </Link>
           </div>
           
         </div>
         <button className="logout-btn">
-            <i class="bi bi-box-arrow-left"></i> Log Out
+            <i className="bi bi-box-arrow-left"></i> Log Out
           </button>
       </div>
     </>

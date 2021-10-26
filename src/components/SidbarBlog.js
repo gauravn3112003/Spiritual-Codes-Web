@@ -4,7 +4,7 @@ import ConnectUs from "./ConnectUs";
 import Popularpost from "./Popularpost";
 import contactContext from '../Context/Contact/contactContext';
 function scard(val) {
-  return <Popularpost image={val.image} head={val.title} date={val.date} />;
+  return <Popularpost image={val.image} head={val.title} date={val.date} key={val._id} />;
 }
 
 export default function SidbarBlog() {
@@ -22,7 +22,7 @@ export default function SidbarBlog() {
         <div className="search">
           <form action="">
             <input type="text" placeholder="Search Blogs..." className="serach-area" />
-            <i class="bi bi-search"></i>
+            <i className="bi bi-search"></i>
           </form>
         </div>
       </div>

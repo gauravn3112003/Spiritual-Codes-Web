@@ -10,15 +10,15 @@ export default function Navbar() {
   }, [location]);
 
   return (
-    <nav class="navbar ">
-      <div class="max-width">
-        <div class="logo">
+    <nav className="navbar ">
+      <div className="max-width">
+        <div className="logo">
           <Link to="/">
             Spiritual_ <span>Codes</span>
           </Link>
         </div>
-        <ul class="menu ">
-          <div class="navi">
+        <ul className="menu ">
+          <div className="navi">
             <li>
               <Link
                 className={`click ${
@@ -26,7 +26,7 @@ export default function Navbar() {
                 }`}
                 to="/"
               >
-                <i class="bi bi-house-door-fill"></i>
+                <i className="bi bi-house-door-fill"></i>
                 Home
               </Link>
             </li>
@@ -37,7 +37,7 @@ export default function Navbar() {
                 }`}
                 to="/Blog"
               >
-                <i class="bi bi-card-heading"></i>
+                <i className="bi bi-card-heading"></i>
                 Blog
               </Link>
             </li>
@@ -48,7 +48,7 @@ export default function Navbar() {
                 }`}
                 to="/Services"
               >
-                <i class="bi bi-question-square-fill"></i>
+                <i className="bi bi-question-square-fill"></i>
                 Programming Quiz
               </Link>
             </li>
@@ -59,7 +59,7 @@ export default function Navbar() {
                 }`}
                 to="/Services"
               >
-                <i class="bi bi-file-earmark-spreadsheet-fill"></i>
+                <i className="bi bi-file-earmark-spreadsheet-fill"></i>
                 Cheetsheet
               </Link>
             </li>
@@ -70,7 +70,7 @@ export default function Navbar() {
                 }`}
                 to="/Services"
               >
-                <i class="bi bi-handbag-fill"></i>
+                <i className="bi bi-handbag-fill"></i>
                 Service
               </Link>
             </li>
@@ -81,7 +81,7 @@ export default function Navbar() {
                 }`}
                 to="/ContactUs"
               >
-                <i class="bi bi-telephone-fill"></i>
+                <i className="bi bi-telephone-fill"></i>
                 Contact Us
               </Link>
             </li>
@@ -92,18 +92,18 @@ export default function Navbar() {
                 }`}
                 to="/About"
               >
-                <i class="bi bi-person-fill"></i>
+                <i className="bi bi-person-fill"></i>
                 About Us
               </Link>
             </li>
             
           </div>
-          <div class="close">
-            <i class="fas fa-times-circle"></i>
+          <div className="close">
+            <i className="fas fa-times-circle"></i>
           </div>
         </ul>
-        <div class="burger">
-          <i class="bi bi-list listli"></i>
+        <div className="burger">
+          <i className="bi bi-list listli"></i>
         </div>
       </div>
     </nav>

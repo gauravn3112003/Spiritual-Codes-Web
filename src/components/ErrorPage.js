@@ -11,7 +11,7 @@ export default function ErrorPage() {
                 Page Not Found
                 </div>
                 <div className="error-code">
-                    {/* <img src="https://image.freepik.com/free-vector/oops-404-error-with-broken-robot-concept-illustration_114360-1932.jpg" alt="" srcset="" /> */}
+                    {/* <img src="https://image.freepik.com/free-vector/oops-404-error-with-broken-robot-concept-illustration_114360-1932.jpg" alt="" srcSet="" /> */}
                 </div>
                 <div className="message-second">
                 Out of nothing, something.

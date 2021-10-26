@@ -23,7 +23,7 @@ export default function Home() {
             <div className="btn" data-aos="fade-down">
               <Link to="/joinUs">Join Us</Link>
               <Link to="/LoginAdmin">
-                <i class="bi bi-box-arrow-in-right"></i>
+                <i className="bi bi-box-arrow-in-right"></i>
                 Login
               </Link>
             </div>

@@ -14,11 +14,11 @@ export default function BlogCard(props) {
       </div>
       <div className="date-author">
         <div className="date">
-          <i class="bi bi-calendar-event"></i>Date:03/11/03{" "}
+          <i className="bi bi-calendar-event"></i>Date:03/11/03{" "}
         </div>
         <div className="author">
           <div className="icon-auth">
-          <i class="bi bi-person"></i>
+          <i className="bi bi-person"></i>
           </div>
           <div className="text-auth">
           Spirtual_codes

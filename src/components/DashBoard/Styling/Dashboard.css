@@ -4,6 +4,8 @@
 
 .dashboard {
   width: 100%;
+  overflow: hidden;
+  margin-right: 20px;
   height: auto;
   /* background-color: rgb(255, 7, 7); */
   position: relative;
@@ -20,9 +22,11 @@
   width: 300px;
   /* display: none; */
   position: relative;
+  background-color: white;
   /* background-color: yellow; */
   padding: 10px;
-  border-right: 2px solid rgb(228, 228, 228);
+  margin-right: 20px;
+  /* border-right: 2px solid rgb(228, 228, 228); */
 }
 .nav-dash .create-btn {
   display: flex;
@@ -111,19 +115,20 @@ transition: 0.5s ease;
   /* position: fixed; */
   width: 100%;
   display: flex;
-  padding: 30px 00px;
-  justify-content: space-around;
+  padding: 30px 0px;
+  justify-content: space-between;
   align-items: center;
 }
 .dashboard .top-dash .dash-box {
-  border-radius: 10px;
+  border-radius: 5px;
   width: 250px;
   height: 80px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 5px;
-  background-color: rgb(228, 222, 222);
+  box-shadow: 2px 2px 5px rgb(221, 221, 221);
+  background-color: rgb(255, 255, 255);
 }
 .dashboard .top-dash .dash-box .number {
   font-size: 50px;
@@ -157,12 +162,18 @@ transition: 0.5s ease;
   background-color: var(--btn-hover-background);
 }
 .dashboard .bottom {
-  /* background-color: yellow; */
-  height: 500px;
+  background-color: rgb(255, 255, 255);
+  height: 360px;
+  width: 100%;
+  position: absolute;
+  /* padding:20px; */
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 2px 2px 5px rgb(221, 221, 221);
   margin: 10px 0;
   /* margin-top: 160px; */
   /* padding: 10px 0; */
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 .click-nav {

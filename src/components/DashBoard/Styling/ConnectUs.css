@@ -1,30 +1,131 @@
 .dash-head{
-    font-size: 40px;
+    color: blue;
+    font-size: 30px;
     font-weight: 800;
-    text-align: center;
-    background-color: transparent;
-    /* position: fixed; */
-    width: 100%;
+    text-align: left;
+    width: 80%;
+    margin:10px 20px;
+    position: relative;
+}
+.dash-head::before{
+    content: "";
+    color: red;
+    position: absolute;
+    height: 3px;
+    bottom: -10px;
+    background-color: rgb(255, 0, 0);
+    width: 30px;
+    font-weight: 800;
+}
+.table{
+    height: 300px;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 10px 10px;
+    overflow: scroll;
+    /* background-color: yellow; */
 }
 table{
-   
-    padding: 20px  20px;
-    width: 100%;
+    
+    padding: 10px  20px;
     /* margin-top: 30px; */
-    height: 100%;
-    /* border: 1px solid red; */
+    width: 100%;
 
 }
 table tr{
-    background-color: rgb(238, 234, 234);
+    /* background-color: rgb(238, 234, 234); */
     text-align: center;
+    border-bottom: 1px solid black;
 }
 table tr th{
     padding: 20px 0;
+    font-size: 15px;
     font-weight: 800;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.411);
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 2px;    
 }
 table tr td{
     padding: 5px 0;
+    font-size: 10px;
+    border-bottom: 1px solid rgb(221, 219, 219);
+}
+
+
+
+
+
+
+
+/* All blogs  */
+.row{
+    /* background-color: yellow; */
+    width: 100%;
+    height: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.233);
+    padding: 10px 0;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin: 10px 0;
+    position: relative;
+}
+.row img{
+    width: 70px;
+    margin:0 10px 0 10px;
+}
+.row .content-blog .head-dash{
+    font-size: 20px;
+    font-weight: 800;
+}
+.row .content-blog .published{
+    font-size: 15px;
+}
+
+.row .btn-blog-dash{
+    /* background-color: rgb(228, 9, 189); */
+    padding: 5px;
+    display: flex;
+    position: absolute;
+    right: 20px;
+}
+.row .btn-blog-dash .update{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.row .btn-blog-dash .delete{
+    width: 40px;
+    height: 40px;
+}
+.center-dash{
+    display: grid;
+    transition: 0.5s ease;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--btn-background);
+    cursor: pointer;
+    place-items: center;
+}
+.row .btn-blog-dash .center-dash:hover {
+    background-color: var(--btn-hover-background);
+    color: wheat;
+}
+.center-dash i{
+    font-size: 20px;
+    color: white;
+}
+
+
+
+/* connects us fetchings  */
+.row-connet{
+    display: flex;
+}
+.box-connects{
+    margin-left: 20px;
+}
+.box-connects .emails{
+    font-size: 20px;
+    font-weight: 800;
 }
