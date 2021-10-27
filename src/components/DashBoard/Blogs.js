@@ -1,12 +1,14 @@
-import React, { useEffect, useContext } from 'react'
+import React, { useEffect,useState, useContext } from 'react'
 import contactContext from '../../Context/Contact/contactContext';
 import Blog from "./Blog";
 
 import "./Styling/ConnectUs.css";
 
-export default function ContactUsData() {
-
-    function bcard(val) {
+export default function ContactUsData(props) {
+  
+  const searchBlog = props.searchBlog;
+  
+  function bcard(val) {
         return (
           <Blog
             image={val.image}
@@ -14,6 +16,7 @@ export default function ContactUsData() {
             date={val.date}
             _id={val._id}
             key={val._id}
+            
           />
         );
       }
@@ -23,12 +26,16 @@ export default function ContactUsData() {
       useEffect(()=>{
         getBlog();
       },[])
-     
-
   return (
     <>
       <div className="table">
-        {blogs.map(bcard)}
+        {blogs.filter((val)=>{
+          if(searchBlog ===""){
+            return val;
+          }else if(val.title.toString().toLowerCase().includes(searchBlog.toString().toLowerCase())){
+            return val;
+          }
+        }).map(bcard)}
       </div>
     </>
   );

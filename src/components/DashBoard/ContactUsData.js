@@ -4,7 +4,14 @@ import "./Styling/ConnectUs.css";
 export default function ContactUsData() {
   return (
     <>
-      <div className="dash-head">Contact Us</div>
+      <div className="dash-head">
+        <div className="text">
+          Contact Us
+        </div>
+        <div className="search">
+          <input type="search" placeholder="Search By name"  name="" id="" />
+        </div>
+      </div>
       <div className="table">
         <table>
           <tr>

@@ -12,7 +12,7 @@ export default function SidbarBlog() {
   const context = useContext(contactContext);
   const {blogs,getBlog} = context;
   useEffect(()=>{
-    getBlog()
+    getBlog();
   },[])
 
   return (
