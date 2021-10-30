@@ -58,7 +58,7 @@ const ContactState = (props) => {
   };
 
   // Counts blog data
-  const countblogsInitial = [0];
+  const countblogsInitial = [];
   const [countBlogs, setCountBlogs] = useState(countblogsInitial);
   const getCountBlog = async () => {
     const res = await fetch(`${host}/api/createPost/countAllBlog`, {
@@ -68,7 +68,7 @@ const ContactState = (props) => {
       },
     });
     const json = await res.json();
-    console.log(json);
+    // console.log(json);
     setCountBlogs(json);
   };
   // Counts Contact Us data
@@ -138,8 +138,10 @@ const ContactState = (props) => {
         addContact,
         getCountBlog,
         countBlogs,
+        setCountBlogs,
         getCountConnect,
         countConnect,
+        setCountConnect,
         getCountContact,
         countContact,
         connect,

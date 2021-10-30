@@ -1,33 +1,31 @@
-import React, { useContext } from "react";
+import React, {useContext } from "react";
 import contactContext from "../../Context/Contact/contactContext";
-
 
 export default function Blog(props) {
   const context = useContext(contactContext);
-  const { deleteBlog } = context;
+  const { deleteBlog, countBlogs, setCountBlogs } = context;
+  
 
   return (
     <>
-      <div className="row" >
-        <img
-          src={props.image}
-          alt=""
-          srcSet=""
-        />
+      <div className="row">
+        <img src={props.image} alt="" srcSet="" />
 
         <div className="content-blog">
-          <div className="head-dash">
-            {props.head}
-          </div>
+          <div className="head-dash">{props.head}</div>
           <div className="published">Published : {props.date}</div>
         </div>
         <div className="btn-blog-dash">
           <button className="update center-dash">
             <i className="bi bi-pencil-square"></i>
           </button>
-          <button className="delete center-dash" onClick={()=>{
-                deleteBlog(props._id)
-            }}>
+          <button
+            className="delete center-dash"
+            onClick={() => {
+              deleteBlog(props._id);
+              setCountBlogs(countBlogs-1);
+            }}
+          >
             <i className="bi bi-trash"></i>
           </button>
         </div>

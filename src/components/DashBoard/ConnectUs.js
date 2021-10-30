@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext, } from "react";
 
 import contactContext from "../../Context/Contact/contactContext";
 import "./Styling/ConnectUs.css";
 export default function ConnectUs(props) {
   const context = useContext(contactContext);
-  const { deleteConnect } = context;
-
+  const { deleteConnect,setCountConnect,countConnect } = context;
+ 
   return (
     <>
       <div className="row row-connet">
@@ -21,6 +21,7 @@ export default function ConnectUs(props) {
             className="delete center-dash"
             onClick={() => {
               deleteConnect(props._id);
+              setCountConnect(countConnect - 1);
             }}
           >
             <i className="bi bi-trash"></i>
