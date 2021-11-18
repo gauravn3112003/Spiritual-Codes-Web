@@ -16,6 +16,7 @@ export default function BlogAllCardData() {
         head={val.title}
         descri={val.description}
         date={val.date}
+        id={val._id}
         key={val._id}
       />
     );

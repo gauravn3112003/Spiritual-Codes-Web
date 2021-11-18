@@ -1,15 +1,34 @@
-import React from "react";
+import React, { useEffect, useContext } from "react";
 import "./Styling/ConnectUs.css";
+import contactContext from "../../Context/Contact/contactContext";
+import ContactUs from "./ContactUs";
 
 export default function ContactUsData() {
+  function contactUs(val) {
+    return (
+      <ContactUs
+        name={val.name}
+        email={val.email}
+        number={val.number}
+        message={val.message}
+        _id={val._id}
+        key={val._id}
+      />
+    );
+  }
+
+  const context = useContext(contactContext);
+  const { fetchContact, getContacts } = context;
+  useEffect(() => {
+    getContacts();
+  }, []);
+
   return (
     <>
       <div className="dash-head">
-        <div className="text">
-          Contact Us
-        </div>
+        <div className="text">Contact Us</div>
         <div className="search">
-          <input type="search" placeholder="Search By name"  name="" id="" />
+          <input type="search" placeholder="Search By name" name="" id="" />
         </div>
       </div>
       <div className="table">
@@ -22,18 +41,7 @@ export default function ContactUsData() {
             <th>message</th>
             <th>Operation</th>
           </tr>
-          <tr>
-            <td>1</td>
-            <td>Gaurav Narnaware</td>
-            <td>8805950201</td>
-            <td>gauravnarnaware31120032gmail.com</td>
-            <td>hey everyone</td>
-            <td className="operations">
-                <div className="delete">
-                <i class="bi bi-trash"></i>
-                </div>
-            </td>
-          </tr>
+          {fetchContact.map(contactUs)}
         </table>
       </div>
     </>

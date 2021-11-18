@@ -8,7 +8,7 @@
   --btn-color: rgb(255, 255, 255);
   --btn-background: #0c17b8;
   --btn-hover-background: rgb(0, 3, 194);
-  --body-background: #f3f3f3;
+  --body-background: #fafafa;
   --nav-btn-hover-color: red;
   --text-color-opacity: 80%;
   --text-color: rgba(0, 0, 0, 0.651);
@@ -371,7 +371,7 @@ body .wrapper {
 section .box {
   max-width: 1200px;
   display: block;
-  padding: 0 10px;
+  padding: 0 25px;
   /* border: 1px solid red; */
   position: relative;
   left: 50%;
@@ -832,7 +832,7 @@ section .social i {
 /* Blog card design */
 .wrapper .card-3 {
   width: 240px;
-  height: auto;
+  height: 320px;
 }
 .wrapper .content img {
   width: 100%;
@@ -843,10 +843,15 @@ section .social i {
   cursor: pointer;
 }
 .wrapper .content .tag {
-  color: blue;
-  font-weight: 800;
-  margin-top: 15px;
-  width: 100%;
+  background-color: rgb(161, 161, 231);
+  color: white;
+  top: 13px;
+  right: 13px;
+  position: absolute;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  width: auto;
 }
 .wrapper .content .head {
   /* border: 1px solid red; */
@@ -1045,7 +1050,7 @@ aside {
   .wrapper .card-3 {
     width: 220px;
     padding: 10px;
-    height: auto;
+    height: 320px;
   }
   .wrapper .card-3 .head {
     font-size: 15px;
@@ -1078,6 +1083,7 @@ aside {
   }
   .blogbox .blogLeft {
     width: 100%;
+    margin-right: 0;
   }
   .blogbox aside {
     width: 100%;
@@ -1087,6 +1093,7 @@ aside {
 @media (max-width: 882px) {
   .wrapper .card-3 {
     width: 180px;
+    height: 270px;
   }
   .wrapper .card-3 .head {
     font-size: 15px;
@@ -1105,7 +1112,6 @@ aside {
 @media (max-width: 875px) {
   .wrapper .card-3 {
     width: 180px;
-    height: auto;
   }
   .wrapper .card-3 .head {
     font-size: 12px;
@@ -1128,6 +1134,7 @@ aside {
 @media (max-width: 645px) {
   .wrapper .card-3 {
     width: 170px;
+    height: 225px;
   }
   .wrapper .content .date-author i {
     font-size: 10px;
@@ -1152,6 +1159,7 @@ aside {
 @media (max-width: 555px) {
   .wrapper .card-3 {
     width: 200px;
+    height: 260px;
   }
 }
 @media (max-width: 480px) {
@@ -1163,13 +1171,12 @@ aside {
 @media (max-width: 439px) {
   .wrapper .card-3 {
     width: 170px;
-    height: auto;
   }
 }
 @media (max-width: 420px) {
   .wrapper .card-3 {
     width: 150px;
-    height: auto;
+    height: 235px;
   }
 }
 @media (max-width: 380px) {
@@ -1178,24 +1185,27 @@ aside {
     height: auto;
   }
   .wrapper .content .tag {
-    color: blue;
+    color: white;
     font-weight: 800;
-    margin-top: 15px;
-    width: 100%;
+    margin-top: 15
+px
+;
+    text-align: center;
+    width: 18%;
     font-size: 15px;
   }
   .wrapper .content .head {
     /* border: 1px solid red; */
     width: 100%;
     padding: 5px 0;
-    font-size: 18px;
+    font-size: 25px;
     font-weight: 800;
   }
 
   .wrapper .content .text {
     text-align: justify;
     font-family: sans-serif;
-    font-size: 10px;
+    font-size: 14px;
     width: 100%;
     color: var(--text-color);
     /* margin-top: 20px; */
@@ -1204,17 +1214,17 @@ aside {
     width: 100%;
   }
   .wrapper .content .date-author .date {
-    font-size: 10px;
+    font-size: 13px;
     width: 100%;
     padding: 10px 0;
     /* background-color:  red; */
   }
   .wrapper .content .date-author i {
-    font-size: 12px;
+    font-size: 13px;
     margin-right: 5px;
   }
   .wrapper .content .date-author .author .text-auth {
-    font-size: 10px;
+    font-size: 13px;
   }
   .wrapper .content .btn {
     width: 100%;
@@ -1566,11 +1576,74 @@ footer .pages a:hover {
   }
 }
 
-.Red {
-  text-align: justify;
-  padding-bottom: 25px;
-}
+/* blogscreen styling  */
 
+.red {
+  /* text-align: justify; */
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.068);
+  margin-right: 20px;
+  width: 100%;
+  padding: 20px;
+  
+}
+.red header{
+  /* background-color: yellow; */
+  padding: 5px;
+}
+.red header a{
+  display: flex;
+  color: rgb(255, 0, 0);
+  flex-direction: row;
+  align-items: center;
+}
+.red header a span{
+  margin-left: 10px;
+}
+.red header a i{
+  font-size: 30px;
+  font-weight: 800;
+  margin-right: 10px;
+}
+.red header h1{
+  text-align: left;
+  font-size: 37px;
+  font-family: "Roboto Condensed', Arial, sans-serif";
+  /* background-color: red; */
+  /* font-weight: 800; */
+}
+.red header .intro{
+  display: flex;
+  /* background-color: red; */
+  align-items: center;
+  justify-content: space-between;
+}
+.red header .intro .blogLeftScreen{
+  display: flex;
+  align-items: center;
+}
+.red header .intro .blogLeftScreen span{
+  opacity: 80%;
+}
+.red header .intro .blogLeftScreen img{
+  width: 30px;
+  height: 28px;
+  margin-right: 10px;
+  border-radius: 50px;
+  border-bottom: 2px solid rgb(255, 0, 0);
+  border-top: 2px solid rgb(255, 0, 0);
+}
+.red header .intro .blogRightScreen i{
+  margin-right: 5px;
+}
+.red header .intro .blogRightScreen span{
+  opacity: 80%;
+}
+@media (max-width: 830px){
+  .red{
+    margin-right: 0;
+  }
+}
 /* Ads components stylings */
 
 .ads-box {

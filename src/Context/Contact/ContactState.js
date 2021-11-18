@@ -2,11 +2,11 @@ import { useState } from "react/cjs/react.development";
 import ContactContext from "./contactContext";
 
 const ContactState = (props) => {
+  const host = "http://localhost:5000";
+
   // fetch all blog data
   const blogsInitial = [];
   const [blogs, setBlogs] = useState(blogsInitial);
-
-  const host = "http://localhost:5000";
   const getBlog = async () => {
     const res = await fetch(`${host}/api/createPost/fetchAllBlog`, {
       method: "GET",
@@ -19,24 +19,38 @@ const ContactState = (props) => {
     setBlogs(json);
   };
 
-    // delete Blogs  data
-    const deleteBlog = async (id) => {
-      // API Call
-      const response = await fetch(`${host}/api/createPost/deleteBlog/${id}`, {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      const newBlog = blogs.filter((props) => {
-        return props._id !== id;
-      });
-      setBlogs(newBlog);
-    };
+  // Counts blog data
+  const countblogsInitial = [0];
+  const [countBlogs, setCountBlogs] = useState(countblogsInitial);
+  const getCountBlog = async () => {
+    const res = await fetch(`${host}/api/createPost/countAllBlog`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const json = await res.json();
+    // console.log(json);
+    setCountBlogs(json);
+  };
+
+  // delete Blogs  data
+  const deleteBlog = async (id) => {
+    // API Call
+    const response = await fetch(`${host}/api/createPost/deleteBlog/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const newBlog = blogs.filter((props) => {
+      return props._id !== id;
+    });
+    setBlogs(newBlog);
+  };
 
   // Add contacts data into database
   const addContact = async (name, email, number, message) => {
-    const host = "http://localhost:5000";
     const res = await fetch(`${host}/api/user_routes/createuser`, {
       method: "POST",
       headers: {
@@ -56,21 +70,22 @@ const ContactState = (props) => {
       window.alert("registration Successfull");
     }
   };
+  // fetch all Contact Us data
+  const contactInitial = [];
+  const [fetchContact, setFetchContact] = useState(contactInitial);
 
-  // Counts blog data
-  const countblogsInitial = [];
-  const [countBlogs, setCountBlogs] = useState(countblogsInitial);
-  const getCountBlog = async () => {
-    const res = await fetch(`${host}/api/createPost/countAllBlog`, {
+  const getContacts = async () => {
+    const res = await fetch(`${host}/api/user_routes/fetchAllContactUs`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
       },
     });
     const json = await res.json();
-    // console.log(json);
-    setCountBlogs(json);
+    console.log(json);
+    setFetchContact(json);
   };
+
   // Counts Contact Us data
   const countContactInitial = [0];
   const [countContact, setCountContact] = useState(countContactInitial);
@@ -87,6 +102,24 @@ const ContactState = (props) => {
     setCountContact(json);
   };
 
+  // delete Contact us data
+  const deleteContact = async (id) => {
+    // API Call
+    const response = await fetch(
+      `${host}/api/user_routes/deleteContact/${id}`,
+      {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    const newContact = fetchContact.filter((props) => {
+      return props._id !== id;
+    });
+    setFetchContact(newContact);
+  };
+
   //fetch All connects Us data
   const connectInitial = [];
   const [connect, setConnect] = useState(connectInitial);
@@ -100,6 +133,7 @@ const ContactState = (props) => {
     const json = await res.json();
     setConnect(json);
   };
+
   // Counts Connect Us data
   const countConnectInitial = [0];
   const [countConnect, setCountConnect] = useState(countConnectInitial);
@@ -118,36 +152,72 @@ const ContactState = (props) => {
   // delete connects us data
   const deleteConnect = async (id) => {
     // API Call
-    const response = await fetch(`${host}/api/connect-us-routes/deleteConnect/${id}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+    const response = await fetch(
+      `${host}/api/connect-us-routes/deleteConnect/${id}`,
+      {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     const newConnect = connect.filter((props) => {
       return props._id !== id;
     });
     setConnect(newConnect);
   };
 
+  // fetch single blog  data
+  const blogsDataInitial = [];
+  const [BlogData, setBlogData] = useState(blogsDataInitial);
+    const getBlogData = async (id) => {
+        const res = await fetch(`${host}/api/createPost/blogPost/${id}`, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        const json = await res.json();
+        // console.log(json);
+        setBlogData(json);
+    };
+
+
+
+
+
+
+
+
+
+
+
   return (
     <ContactContext.Provider
       value={{
         blogs,
         getBlog,
-        addContact,
-        getCountBlog,
+        deleteBlog,
         countBlogs,
         setCountBlogs,
+        getCountBlog,
+        getBlogData,
+        BlogData,
+
+        fetchContact,
+        getCountContact,
+        countContact,
+        setCountContact,
+        getContacts,
+        deleteContact,
+        addContact,
+
+        connect,
         getCountConnect,
         countConnect,
         setCountConnect,
-        getCountContact,
-        countContact,
-        connect,
         getConnect,
         deleteConnect,
-        deleteBlog
       }}
     >
       {props.children}

@@ -1,7 +1,9 @@
-import React from "react";
+import React,{useContext} from "react";
 import "../App.css";
 import { Link } from "react-router-dom";
 export default function BlogCard(props) {
+
+
   return (
     <div className="content card-3" data-aos="fade-down">
       <img src={props.image} width="30px" alt="project1" />
@@ -18,17 +20,16 @@ export default function BlogCard(props) {
         </div>
         <div className="author">
           <div className="icon-auth">
-          <i className="bi bi-person"></i>
+            <i className="bi bi-person"></i>
           </div>
-          <div className="text-auth">
-          Spirtual_codes
-          </div>
+          <div className="text-auth">Spirtual_codes</div>
         </div>
       </div>
       <div className="btn" data-aos="fade-down">
         <div className="btn-1">
-          <Link to="/Blog/BlogOpen"> Read More</Link>
+          <Link to={`/Blog/${props.head}/${props.id}`} > Read More</Link>
         </div>
+        
       </div>
     </div>
   );

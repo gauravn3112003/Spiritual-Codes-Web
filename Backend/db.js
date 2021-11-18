@@ -4,7 +4,7 @@ const mongoURI = "mongodb://localhost:27017/spiritual_codes?readPreference=prima
 const connectToMongo = ()=>{
     mongoose.connect(mongoURI, ()=>{
         console.log("Connected mongo succesfully");
-    })
+    });
 }
 
 module.exports = connectToMongo;

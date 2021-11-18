@@ -32,8 +32,14 @@ router.post("/createuser",[
 });
 
 
+//Routes 2:  To fetch all Contact Us data : get "/api/user_routes/fetchAllContactUs"
+router.get("/fetchAllContactUs", async (req, res) => {
+  const fetchContact = await Contact.find();
+  res.json(fetchContact);
+});
 
-//Routes 2:  To fetch all counts Contact Us  data : get "/api/user_routes/countContact"
+
+//Routes 3:  To fetch all counts Contact Us  data : get "/api/user_routes/countContact"
 router.get("/countContact", async (req, res) => {
   try {
     const countContact = await Contact.find().countDocuments();
@@ -41,6 +47,24 @@ router.get("/countContact", async (req, res) => {
     res.json(countContact);
   } catch (error) {
     console.log(error);
+  }
+});
+
+
+// ROUTE 4: Delete an existing Contacts  using: DELETE "/api/user_routes/deleteContact". 
+router.delete("/deleteContact/:id", async (req, res) => {
+  try {
+    // Find the note to be delete and delete it
+    let deleteContact = await Contact.findById(req.params.id);
+    if (!deleteContact) {
+      return res.status(404).send("Not Found");
+    }
+
+    deleteContact = await Contact.findByIdAndDelete(req.params.id);
+    res.json({ Success: "Note has been deleted", Contact: Contact });
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send("Internal Server Error");
   }
 });
 

@@ -70,5 +70,10 @@ router.delete("/deleteBlog/:id", async (req, res) => {
   }
 });
 
+//Routes 5:  To fetch spcific blog post data : get "/api/createPost/blogPost"
+router.get("/blogPost/:id", async (req, res) => {
+  const posts = await createPost.findById(req.params.id);
+  res.json(posts);
+});
 
 module.exports = router;

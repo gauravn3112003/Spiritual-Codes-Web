@@ -15,8 +15,10 @@ export default function Blog() {
             <div className="blogbox">
             <div className="blogLeft">
               <Switch>
-                <Route path="/Blog/BlogOpen">
-                  <BlogScreen/>
+                <Route path="/Blog/:head/:id" render={props =>(
+
+                  <BlogScreen {...props} />
+                )} >
                 </Route>
                 <Route path="/">
                   <BlogAllCardData />
