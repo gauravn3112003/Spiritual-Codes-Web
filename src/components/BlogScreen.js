@@ -1,19 +1,19 @@
 import React from "react";
 import "../App.css";
-import { useContext,useEffect } from "react";
+import { useContext, useEffect } from "react";
 import contactContext from "../Context/Contact/contactContext";
 
 export default function BlogScreen(props) {
 
+
+  // console.log(props.match.params.id);
   const getId = props.match.params.id;
   const context = useContext(contactContext);
   const { getBlogData, BlogData,  } = context;
   useEffect(()=>{
     getBlogData();
-  },[])
-  getBlogData(getId);
-    
-    // console.log(BlogData.tag);
+    getBlogData(getId);
+  },[]);
   return (
     <div className="red">
       <header>

@@ -15,7 +15,7 @@ const ContactState = (props) => {
       },
     });
     const json = await res.json();
-    console.log(json);
+    // console.log(json);
     setBlogs(json);
   };
 
@@ -168,7 +168,7 @@ const ContactState = (props) => {
   };
 
   // fetch single blog  data
-  const blogsDataInitial = [];
+  const blogsDataInitial = "Not Found";
   const [BlogData, setBlogData] = useState(blogsDataInitial);
     const getBlogData = async (id) => {
         const res = await fetch(`${host}/api/createPost/blogPost/${id}`, {
