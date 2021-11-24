@@ -85,7 +85,7 @@ td.operations {
   /* background-color: red; */
 }
 .delete {
-  width: 15px;
+  width: 100%;
   display: grid;
   place-items: center;
   /* background: yellow; */

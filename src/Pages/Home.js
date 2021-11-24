@@ -10,6 +10,9 @@ export default function Home() {
         className="home custom-shape-divider-bottom-1630397398"
         data-aos="fade-down"
       >
+        <div className="shape">
+          
+        </div>
         <div className="left">
           <div className="container">
             <div className="head">

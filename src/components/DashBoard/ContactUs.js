@@ -13,14 +13,11 @@ export default function ContactUs(props) {
         <td>{props.email}</td>
         <td>{props.message}</td>
         <td className="operations">
-          <div className="delete">
-            <i
-              class="bi bi-trash"
-              onClick={() => {
+          <div className="delete"  onClick={() => {
                 deleteContact(props._id);
                 setCountContact(countContact - 1);
-              }}
-            ></i>
+              }}>
+            <i class="bi bi-trash"></i>
           </div>
         </td>
       </tr>

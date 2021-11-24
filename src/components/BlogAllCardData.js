@@ -1,8 +1,8 @@
-import React, { useEffect, useContext } from 'react'
+import React, { useEffect,useState, useContext } from 'react'
 import contactContext from "../Context/Contact/contactContext";
 import BlogCard from "./BlogCard";
 import "../App.css";
-// import Blogdetail from "../Blogdetail";
+import Spinner from './Spinner';
 
 
 
@@ -24,13 +24,16 @@ export default function BlogAllCardData() {
 
   const context = useContext(contactContext);
   const {blogs,getBlog} = context;
+  const [loading, setLoading] = useState(false)
   useEffect(()=>{
     getBlog();
+    setLoading(true);
   },[])
  
     return (
         <>
-        {blogs.map(bcard)}
+        {loading?blogs.map(bcard):<Spinner/>}
+        
         </>
     )
 }

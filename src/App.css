@@ -4,11 +4,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
 /* Variables  */
+.shape{
+  background-color: rgba(183, 178, 178, 0.242);
+  width: 150px;
+  border-radius: 10px;
+  top: 50%;
+  /* transform: translateY(-50%); */
+  transform:  rotate(20deg);
+  height: 150px;
+  left: 20px;
+  position: absolute;
+
+}
 :root {
   --btn-color: rgb(255, 255, 255);
   --btn-background: #0c17b8;
   --btn-hover-background: rgb(0, 3, 194);
-  --body-background: #fafafa;
+  --body-background: #f3f4fb;
   --nav-btn-hover-color: red;
   --text-color-opacity: 80%;
   --text-color: rgba(0, 0, 0, 0.651);
@@ -262,15 +274,15 @@ body {
   }
   .navbar .menu {
     position: fixed;
-    background-color: rgba(0, 1, 43, 0.96);
+    background-color: rgba(0, 0, 0, 0.9);
     height: 100vh;
-    width: 100%;
+    width: 80%;
     left: -100%;
     top: 0px;
     flex-direction: column;
     /* border-top-right-radius: 10px; */
     /* border-bottom-left-radius: 20px; */
-    transition: all 0.3s ease;
+    transition: all 0.2s ease-in-out;
   }
   .navbar .active {
     left: 0;
@@ -289,7 +301,7 @@ body {
     width: 70%;
     text-align: left;
     /* border:2px solid red; */
-    padding: 5px 50px;
+    padding: 5px 20px;
   }
   .navbar ul li i {
     color: white;
@@ -502,7 +514,7 @@ section .content:hover {
     height: 200px;
   }
 }
-@media (max-width: 350px) {
+@media (max-width: 380px) {
   .wrapper .content {
     width: 100%;
     padding: 10px;
@@ -1162,24 +1174,25 @@ aside {
     height: 260px;
   }
 }
+@media (max-width: 510px) {
+  .wrapper .card-3 {
+    width: 150px;
+    height: 260px;
+  }
+}
 @media (max-width: 480px) {
   .wrapper .card-3 {
-    width: 180px;
+    /* width: 180px; */
+    height: 240px;
   }
 }
 
 @media (max-width: 439px) {
   .wrapper .card-3 {
-    width: 170px;
+    width: 150px;
   }
 }
 @media (max-width: 420px) {
-  .wrapper .card-3 {
-    width: 150px;
-    height: 235px;
-  }
-}
-@media (max-width: 380px) {
   .wrapper .card-3 {
     width: 100%;
     height: auto;
@@ -1187,9 +1200,7 @@ aside {
   .wrapper .content .tag {
     color: white;
     font-weight: 800;
-    margin-top: 15
-px
-;
+    margin-top: 15px;
     text-align: center;
     width: 18%;
     font-size: 15px;
@@ -1199,6 +1210,7 @@ px
     width: 100%;
     padding: 5px 0;
     font-size: 25px;
+    margin-top: 20px;
     font-weight: 800;
   }
 
@@ -1237,6 +1249,37 @@ px
     width: 100%;
     /* box-shadow: var(--btn-shadow); */
   }
+}
+
+/* Category Styling */
+.category{
+  width: 100%;
+  /* background-color: rgb(67, 34, 186); */
+  height: auto;
+  align-items: center;
+  display: flex;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.category a{
+  /* background-color: red; */
+  background-color: rgba(218, 218, 252, 0.372);
+  width: auto;
+  padding: 2px 10px;
+  border-radius: 5px;
+  height: 20px;
+  margin: 5px;
+  transition: 0.6s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 800;
+  /* border: 0.5px solid rgba(0, 0, 0, 0.194); */
+  font-size: 10px;
+}
+.category a:hover{
+  background-color: var(--btn-hover-background);
+  color: var(--btn-color);
 }
 /* Connect Us Styling */
 .blog-connect {
@@ -1641,6 +1684,7 @@ footer .pages a:hover {
 }
 @media (max-width: 830px){
   .red{
+    height: 100%;
     margin-right: 0;
   }
 }

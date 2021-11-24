@@ -13,6 +13,7 @@ export default function BlogScreen(props) {
   useEffect(()=>{
     getBlogData();
     getBlogData(getId);
+    console.log(BlogData.title);
   },[]);
   return (
     <div className="red">
