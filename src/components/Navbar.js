@@ -99,7 +99,7 @@ export default function Navbar() {
             
           </div>
           <div className="close">
-            <i className="fas fa-times"></i>
+            <i className="fas fa-times-circle"></i>
           </div>
         </ul>
         <div className="burger">
