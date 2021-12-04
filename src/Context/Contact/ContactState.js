@@ -4,6 +4,39 @@ import ContactContext from "./contactContext";
 const ContactState = (props) => {
   const host = "http://localhost:5000";
 
+  // Add Blogs data into database
+  const addBlogPost = async (
+    title,
+    image,
+    tag,
+    author,
+    description,
+    datee,
+    mainData
+  ) => {
+    const res = await fetch(`${host}/api/createPost/create_post`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        title,
+        image,
+        tag,
+        author,
+        description,
+        datee,
+        mainData,
+      }),
+    });
+    const data = await res.json();
+    if (res.status === 500 || !data) {
+      window.alert("Invalid registration");
+    } else {
+      window.alert("registration Successfull");
+    }
+  };
+
   // fetch all blog data
   const blogsInitial = [];
   const [blogs, setBlogs] = useState(blogsInitial);
@@ -170,31 +203,22 @@ const ContactState = (props) => {
   // fetch single blog  data
   const blogsDataInitial = "Not Found";
   const [BlogData, setBlogData] = useState(blogsDataInitial);
-    const getBlogData = async (id) => {
-        const res = await fetch(`${host}/api/createPost/blogPost/${id}`, {
-          method: "GET",
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
-        const json = await res.json();
-        // console.log(json);
-        setBlogData(json);
-    };
-
-
-
-
-
-
-
-
-
-
+  const getBlogData = async (id) => {
+    const res = await fetch(`${host}/api/createPost/blogPost/${id}`, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+    const json = await res.json();
+    // console.log(json);
+    setBlogData(json);
+  };
 
   return (
     <ContactContext.Provider
       value={{
+        addBlogPost,
         blogs,
         getBlog,
         deleteBlog,

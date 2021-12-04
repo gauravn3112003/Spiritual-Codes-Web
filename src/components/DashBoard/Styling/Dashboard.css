@@ -163,17 +163,17 @@ transition: 0.5s ease;
 }
 .dashboard .bottom {
   background-color: rgb(255, 255, 255);
-  height: 360px;
+  height: 100%;
   width: 100%;
   position: absolute;
   /* padding:20px; */
-  left: 50%;
-  transform: translateX(-50%);
+  /* left: 50%;
+  transform: translateX(-50%); */
   box-shadow: 2px 2px 5px rgb(221, 221, 221);
   margin: 10px 0;
   /* margin-top: 160px; */
   /* padding: 10px 0; */
-  /* overflow: scroll; */
+  overflow: scroll;
 }
 
 .click-nav {

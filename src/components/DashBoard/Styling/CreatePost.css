@@ -1,0 +1,47 @@
+.form-post{
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.form-post .input-post{
+    font-weight: 800;
+    margin: 5px 0;
+}
+.form-post .input-post .input-post-input{
+    width: 100%;
+    border-radius: 0;
+    margin-top:6px ;
+    outline: none;
+    height: 35px;
+    border: 1px solid rgba(0, 0, 0, 0.297);
+}
+/* form .head{
+    background-color: red;
+} */
+
+
+.form-post .head-post .flex{
+    display: flex;
+    /* background-color: yellow; */
+    justify-content: space-between;
+    /* width: 50%; */
+    padding: 10px 0;
+}
+
+.form-post .submit button{
+    padding: 10px 50px;
+    margin: 10px 0;
+    float: right;
+    background-color: var(--btn-background);
+    color: white;
+    font-weight: 800;
+    letter-spacing: 2px;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.form-post .submit button:hover{
+    background-color: var(--btn-hover-background);
+}

@@ -7,10 +7,12 @@ const { body, validationResult } = require("express-validator");
 router.post(
   "/create_post",
   [
-    body("title", "Enter valid name").isLength({ min: 3 }),
+    body("title", "Enter valid title").isLength({ min: 3 }),
     body("image", "Enter a valid Image Link"),
     body("tag", "Enter valid tag").isLength({ min: 2 }),
+    body("author", "Author name must be 2 chracter").isLength({ min: 2 }),
     body("description", "description must be 3 charater").isLength({ min: 3 }),
+    body("datee", "Enter a valid Date"),
     body("mainData", "mainData must be 3 charater").isLength({ min: 3 }),
   ],
   async (req, res) => {
@@ -21,12 +23,14 @@ router.post(
     }
     try {
       // to create database table
-      const { title, image, tag, description, mainData } = req.body;
+      const { title, image, tag, description,author,datee ,mainData } = req.body;
       const create = await createPost.create({
         title,
         image,
         tag,
+        author,
         description,
+        datee,
         mainData,
       });
       res.status(201).send(create);

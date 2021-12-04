@@ -1,10 +1,10 @@
 import React from "react";
-import Editor from "./Editor";
-
+import MyEditor from "./Editor";
 export default function CreatePost() {
   return (
     <>
-      <Editor />
+        <MyEditor />
+        
     </>
   );
 }

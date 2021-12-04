@@ -1,14 +1,11 @@
 import React, { useState,useContext } from "react";
-// import { useHistory } from "react-router";
 import contactContext from "../Context/Contact/contactContext";
 
 import "../App.css";
 
 export default function ContactUs() {
-  // const host = "http://localhost:5000";
   const context = useContext(contactContext);
   const {addContact} = context;
-  // const history = useHistory();
   const [contact, setContact] = useState({
     name: "",
     email: "",

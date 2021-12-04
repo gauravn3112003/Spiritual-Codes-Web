@@ -42,7 +42,7 @@
   background-color: rgba(216, 216, 216, 0.24);
 }
 .table {
-  height: 270px;
+  height: auto;
   display: flex;
   flex-direction: column;
   padding: 10px 10px;
