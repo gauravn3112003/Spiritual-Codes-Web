@@ -14,7 +14,7 @@ export default function ContactUsData(props) {
           <Blog
             image={val.image}
             head={val.title}
-            date={val.date}
+            date={val.datee}
             _id={val._id}
             key={val._id}
             

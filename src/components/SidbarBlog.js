@@ -31,15 +31,7 @@ export default function SidbarBlog() {
         <div className="blog-side">Connect Us</div>
         <ConnectUs />
       </div>
-      <div className="popular-side">
-        <div className="blog-side">Search Blog</div>
-        <div className="search">
-          <form action="">
-            <input type="text" placeholder="Search Blogs..." className="serach-area" />
-            <i className="bi bi-search"></i>
-          </form>
-        </div>
-      </div>
+     
       
     </aside>
   );

@@ -45,3 +45,21 @@
 .form-post .submit button:hover{
     background-color: var(--btn-hover-background);
 }
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 970px) {
+    .form-post{
+        padding: 20px;
+    }
+    .form-post .flex{
+        flex-direction: column;
+    }
+}

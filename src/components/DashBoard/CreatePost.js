@@ -3,8 +3,10 @@ import MyEditor from "./Editor";
 export default function CreatePost() {
   return (
     <>
-        <MyEditor />
-        
+      <div className="dash-head">
+        <div className="text">Create Blog</div>
+      </div>
+      <MyEditor />
     </>
   );
 }

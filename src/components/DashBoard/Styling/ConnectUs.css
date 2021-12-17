@@ -167,3 +167,22 @@ td.operations {
   font-size: 20px;
   font-weight: 800;
 }
+
+/* responsiveness */
+@media (max-width: 970px){
+  .row .btn-blog-dash {
+    top: 1px;
+    right: 2px;
+  }
+  .row .content-blog .head-dash{
+    font-size: 15px;
+  }
+  .row .btn-blog-dash .update,.row .btn-blog-dash .delete{
+    height: 20px;
+    padding: 5px;
+    width: 20px;
+  }
+  .row .btn-blog-dash button i{
+    font-size: 10px;
+  }
+}

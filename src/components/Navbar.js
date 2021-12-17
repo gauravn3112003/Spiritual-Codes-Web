@@ -18,6 +18,7 @@ export default function Navbar() {
           </Link>
         </div>
         <ul className="menu ">
+          <div className="overlay-nav"></div>
           <div className="navi">
             <li>
               <Link
@@ -48,28 +49,6 @@ export default function Navbar() {
                 }`}
                 to="/Services"
               >
-                <i className="bi bi-question-square-fill"></i>
-                Programming Quiz
-              </Link>
-            </li>
-            <li>
-              <Link
-                className={`click ${
-                  location.pathname === "/Services" ? "clicked" : ""
-                }`}
-                to="/Services"
-              >
-                <i className="bi bi-file-earmark-spreadsheet-fill"></i>
-                Cheetsheet
-              </Link>
-            </li>
-            <li>
-              <Link
-                className={`click ${
-                  location.pathname === "/Services" ? "clicked" : ""
-                }`}
-                to="/Services"
-              >
                 <i className="bi bi-handbag-fill"></i>
                 Service
               </Link>
@@ -88,6 +67,17 @@ export default function Navbar() {
             <li>
               <Link
                 className={`click ${
+                  location.pathname === "/LoginAdmin" ? "clicked" : ""
+                }`}
+                to="/LoginAdmin"
+              >
+                <i className="bi bi-person-fill"></i>
+                Sign In
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={`click ${
                   location.pathname === "/About" ? "clicked" : ""
                 }`}
                 to="/About"
@@ -96,10 +86,23 @@ export default function Navbar() {
                 About Us
               </Link>
             </li>
-            
-          </div>
-          <div className="close">
-            <i className="fas fa-times-circle"></i>
+            <li className="blog-search-li">
+              <form action="GAyjgsh" className="left-search">
+                <input
+                  type="search"
+                  className="blog-search"
+                  placeholder="Search Blog..."
+                  name=""
+                  id=""
+                />
+                <button>
+                  <i class="bi bi-search"></i>
+                </button>
+              </form>
+              <div className="close">
+                <i className="fas fa-times"></i>
+              </div>
+            </li>
           </div>
         </ul>
         <div className="burger">
