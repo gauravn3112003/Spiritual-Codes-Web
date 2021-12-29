@@ -64,17 +64,7 @@ export default function Navbar() {
                 Contact Us
               </Link>
             </li>
-            <li>
-              <Link
-                className={`click ${
-                  location.pathname === "/LoginAdmin" ? "clicked" : ""
-                }`}
-                to="/LoginAdmin"
-              >
-                <i className="bi bi-person-fill"></i>
-                Sign In
-              </Link>
-            </li>
+
             <li>
               <Link
                 className={`click ${
@@ -84,6 +74,17 @@ export default function Navbar() {
               >
                 <i className="bi bi-person-fill"></i>
                 About Us
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={`click ${
+                  location.pathname === "/LoginAdmin" ? "clicked" : ""
+                }`}
+                to="/LoginAdmin"
+              >
+                <i className="bi bi-person-fill"></i>
+                Sign In
               </Link>
             </li>
             <li className="blog-search-li">

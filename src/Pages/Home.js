@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../App.css";
+import HomeSercices from "../components/HomeSercices";
 export default function Home() {
   return (
     <>
@@ -15,14 +16,17 @@ export default function Home() {
           <div className="img-shape">
             <div className="square">
               <img
-                src="https://images.pexels.com/photos/5372800/pexels-photo-5372800.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                src="https://o.remove.bg/downloads/9d82919e-979a-429f-8fb8-6162bc6fa7a5/IMG_4799-removebg-preview.png"
                 alt=""
               />
             </div>
+            <div className="cr-1 card-img">Front-end Developer</div>
+            <div className="cr-2 card-img">Full Stack sDeveloper</div>
+            <div className="cr-3 card-img">Digital Marketer</div>
           </div>
-          <div className="home-text">
+          {/* <div className="home-text">
             Founder of <span>Spiritual Codes</span>
-          </div>
+          </div> */}
           <div className="home-icons">
             <div className="home-icon">
               <i class="bi bi-facebook"></i>
@@ -43,6 +47,9 @@ export default function Home() {
               <div className="swipe-text">Swipe Down</div>
             </div>
           </div>
+        </div>
+        <div className="components">
+          <HomeSercices/>
         </div>
       </section>
     </>

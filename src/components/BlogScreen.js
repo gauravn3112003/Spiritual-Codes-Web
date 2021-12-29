@@ -3,7 +3,6 @@ import "../App.css";
 import "react-quill/dist/quill.snow.css";
 import { useContext, useEffect } from "react";
 import contactContext from "../Context/Contact/contactContext";
-import ReactHtmlParser from "react-html-parser";
 import { Helmet } from "react-helmet";
 
 export default function BlogScreen(props) {
@@ -25,14 +24,14 @@ export default function BlogScreen(props) {
         </Helmet>
         <header>
           <a href="/Blog">
-            <i className="bi bi-arrow-left"></i>Home<span>/</span><span>{BlogData.tag} </span>
+            <i className="bi bi-arrow-left"></i>Home<span>/</span><span>{BlogData.tag}</span><span>/</span><span>{BlogData.title} </span>
           </a>
           <h1>{BlogData.title} </h1>
           <div className="intro">
             <div className="blogLeftScreen">
               <img
                 src="https://1.bp.blogspot.com/-ge9IX3fp-b4/YQvuR6Y3YdI/AAAAAAAAAMQ/dRYGG_wMaysZQjSMKPllqlobFzT5ek4QwCLcBGAsYHQ/s150/Blue%2BSimple%2BGeometric%2BDesign%2BBrand%2BLogo.png"
-                alt=""
+                alt={BlogData.title}
               />
               <span>By- {BlogData.author}</span>
             </div>

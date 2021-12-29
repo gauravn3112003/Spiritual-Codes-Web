@@ -47,3 +47,11 @@ $(document).ready(function() {
 
 
 
+
+$(document).ready(function() {
+    $('.overlay-nav').click(function() {
+        $('.menu').removeClass('active');
+        $('.listli').removeClass('color');
+    });
+    
+});

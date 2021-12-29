@@ -15,40 +15,44 @@ import Dashboard from "./components/DashBoard/Dashboard";
 
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import UseSwitchesBasic from "./components/Switch";
 
 function App() {
   return (
     <>
       <ContactState>
         <Router>
-          <Navbar />
-          <Switch>
-          <Route path="/LoginAdmin">
-              <LoginAdmin/>
-            </Route>
-            <Route path="/ContactUs">
-              <ContactUs />
-            </Route>
-            <Route path="/Blog">
-              <Blog />
-            </Route>
-            <Route path="/Services">
-              <Services />
-            </Route>
-            <Route path="/About">
-              <About />
-            </Route>
-            <Route path="/JoinUs">
-              <JoinUs />
-            </Route>
-            <Route path="/Dashboard">
-              <Dashboard/>
-            </Route>
-            <Route exact path="/" component={Home} />
-          <Route component={ErrorPage} />
-          </Switch>
-          <AdsComponents />
-          <Footer />
+          <div className="all-overlay">
+            <UseSwitchesBasic/>
+            <Navbar />
+            <Switch>
+              <Route path="/LoginAdmin">
+                <LoginAdmin />
+              </Route>
+              <Route path="/ContactUs">
+                <ContactUs />
+              </Route>
+              <Route path="/Blog">
+                <Blog />
+              </Route>
+              <Route path="/Services">
+                <Services />
+              </Route>
+              <Route path="/About">
+                <About />
+              </Route>
+              <Route path="/JoinUs">
+                <JoinUs />
+              </Route>
+              <Route path="/Dashboard">
+                <Dashboard />
+              </Route>
+              <Route exact path="/" component={Home} />
+              <Route component={ErrorPage} />
+            </Switch>
+            <AdsComponents />
+            <Footer />
+          </div>
         </Router>
       </ContactState>
     </>
